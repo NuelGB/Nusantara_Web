@@ -1,0 +1,20 @@
+ #hasil {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    padding: 20px;
+}
+
+.item {
+    text-align: center;
+    height:200px;
+    margin-bottom:30px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.item img {
+    height: 120px;
+    display: block;
+    width: 100%;
+}
+

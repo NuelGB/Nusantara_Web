@@ -31,7 +31,7 @@ nav{
 }
 
 body {
-  background-image: url(/Gambar/backgroundNav.png);
+  background-image: url(/assets/backgroundNav.png);
   background-size: cover;
   background-repeat: no-repeat;
   margin-top:20px;
