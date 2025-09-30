@@ -7,14 +7,32 @@
 
 .item {
     text-align: center;
-    height:200px;
+    height:250px;
     margin-bottom:30px;
     border: 1px solid rgb(0, 0, 0);
 }
 
 .item img {
-    height: 120px;
+    height: 150px;
     display: block;
     width: 100%;
 }
 
+@media (max-width: 768px) {
+#hasil {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    padding: 20px;
+}
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+#hasil {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    padding: 20px;
+}
+}

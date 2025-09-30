@@ -7,11 +7,17 @@ $('#judul').append('<h1> Daftar Rumah Adat di Indonesia</h1> ')
  const gambar = $(`<img src="${r.gambar}" alt="${r.nama}">`);
  row.append(gambar);
 
- const provinsi = $(`<p>${r.provinsi}</p>`);
+ const nama = $(`<b class ="namarumahadat">${r.nama}</b><br>`);
+ row.append(nama);
+
+ const provinsi = $(`<p class="provinsi">${r.provinsi}</p>`);
  row.append(provinsi);
 
- const nama = $(`<b>${r.nama}</b>`);
- row.append(nama);
+ const Detail = $(`<button>Lihat Detail</button>`);
+ row.append(Detail);
+
+ const Favorit = $(`<button>Tambah Favorit</button>`);
+ row.append(Favorit);
 
     $('#hasil').append(row);
   });
@@ -60,11 +66,17 @@ $('#Submit').click((e) => {
     const gambar = $(`<img src="${r.gambar}" alt="${r.nama}">`);
     row.append(gambar);
 
-    const provinsi = $(`<p>${r.provinsi}</p>`);
+    const nama = $(`<b class ="namarumahadat">${r.nama}</b><br>`);
+    row.append(nama);
+
+    const provinsi = $(`<p class="provinsi">${r.provinsi}</p>`);
     row.append(provinsi);
 
-    const nama = $(`<b>${r.nama}</b>`);
-    row.append(nama);
+    const Detail = $(`<button>Lihat Detail</button>`);
+    row.append(Detail);
+
+    const Favorit = $(`<button>Tambah Favorit</button>`);
+    row.append(Favorit);
 
     $('#hasil').append(row);
     });
