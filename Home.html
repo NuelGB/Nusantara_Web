@@ -7,28 +7,46 @@
     <link rel="stylesheet" href="Style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
-<nav class ="navbar">
-    
-    <h3>NusantaraWeb</h3>
-    
-    <div class="right-navbar">
-        <i class="fas fa-bars"></i>
-    <ul class="nav-links">
-        <li><a href="/Home.html">Home</a></li>
-        <li><a href="/about/about.html">About</a></li>
-        <li><a href="search/search.html">Search</a></li>
-        <li><a href="/favorit/favorit.html">Favorit</a></li>
-    </ul> 
-    </div>  
-</nav>
 <body>
-    <div class="container">
-    <div class="welcome">
-    <h1>Selamat Datang di Rumah Adat Nusantara</h1>
-<p>Selamat datang di ruang digital yang memperkenalkan kekayaan budaya bangsa.
-Di sini, Anda dapat menjelajahi keindahan dan keunikan rumah adat dari berbagai daerah di Indonesia 
-— setiap rumah menyimpan cerita, filosofi, dan jati diri masyarakatnya.Mari bersama melestarikan warisan budaya kita.</p>
-</div>
-</div>
+
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="/assets/bgvideo.mp4" type="video/mp4">
+            Browser Anda tidak mendukung tag video.
+        </video>
+    </div>
+
+    <div class="content-overlay">
+        <nav class="navbar">
+            <div class="left-placeholder"></div>
+            
+            <div class="navbar-logo">
+                <a href="Home.html">Nusantara Web</a>
+            </div>
+            
+            <div class="right-navbar">
+                <ul class="nav-links">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="about/about.html">About</a></li>
+                    <li><a href="search/search.html">Search</a></li>
+                    <li><a href="favorit/favorit.html">Favorit</a></li>
+                </ul> 
+                <i class="fas fa-bars hamburger-icon"></i>
+            </div>  
+        </nav>
+
+        <div class="container">
+            <div class="welcome">
+                <h1>Selamat Datang di Rumah Adat Nusantara</h1>
+                <p>Selamat datang di ruang digital yang memperkenalkan kekayaan budaya bangsa.
+                Di sini, Anda dapat menjelajahi keindahan dan keunikan rumah adat dari berbagai daerah di Indonesia 
+                — setiap rumah menyimpan cerita, filosofi, dan jati diri masyarakatnya. Mari bersama melestarikan warisan budaya kita.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script> 
+
 </body>
 </html>
