@@ -109,6 +109,61 @@ function DetailRumahAdat(rumah) {
     const popup = $("#detail");
     const body = $("#popupBody");
 
+    // kosongkan isi sebelumnya
+    body.empty();
+
+    // judul
+    const nama = $(`<h2>🛖 ${rumah.nama}</h2>`);
+    body.append(nama);
+
+    // provinsi
+    const prov = $(`<p><strong>📍 Provinsi:</strong> ${rumah.provinsi}</p><br>`);
+    body.append(prov);
+
+    // gambar
+    const gambar = $(`<img src="${rumah.gambar}" alt="${rumah.nama}" 
+        style="width:100%;border-radius:10px;margin:10px;height:250px;object-fit:cover;">`);
+    body.append(gambar);
+
+    // ciri arsitektur
+    const arsitektur = $(`<p><strong>🧱 Ciri Arsitektur:</strong> ${rumah.ciriArsitektur}</p><br>`);
+    body.append(arsitektur);
+
+    // fungsi ruang
+    const fungsi = $(`<p><strong>🛖 Fungsi Ruang:</strong> ${rumah.fungsiRuang}</p><br>`);
+    body.append(fungsi);
+
+    // filosofi
+    const filosofi = $(`<p><strong>🍂 Filosofi:</strong> ${rumah.filosofi}</p><br>`);
+    body.append(filosofi);
+
+    // penggunaan
+    const penggunaan = $(`<p><strong>🛠️ Penggunaan:</strong> ${rumah.penggunaan}</p><br>`);
+    body.append(penggunaan);
+
+    // referensi
+    const refTitle = $(`<p><strong>📚 Referensi:</strong></p><br>`);
+    body.append(refTitle);
+
+    const Refrensi = $(`<ul style="margin-left:20px;margin-bottom:20px;"></ul>`);
+    rumah.referensi.forEach(ref => {
+        Refrensi.append(`<li>${ref}</li>`);
+    });
+    body.append(Refrensi);
+
+    //model 3d (jika ada)
+    if (rumah.model3d !== undefined && rumah.model3d !== null && rumah.model3d !== "") {
+    const Model3d = $(`<iframe
+    src="${rumah.model3d}/embed"
+    frameborder="0"
+    allow="autoplay; fullscreen; vr"
+    allowfullscreen
+    style="width:100%; height:480px; border-radius:12px;">
+  </iframe>`);
+    body.append(Model3d);
+    }
+
+    // tampilkan konten
     popup.addClass("show");
     $(".close").off("click").on("click", function() {
         popup.removeClass("show");
