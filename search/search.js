@@ -109,7 +109,7 @@ function DetailRumahAdat(rumah) {
     const popup = $("#detail");
     const body = $("#popupBody");
 
-    // kosongkan isi sebelumnya
+    // kosongkan isi sebelumnya dahulu
     body.empty();
 
     // judul
@@ -159,16 +159,69 @@ function DetailRumahAdat(rumah) {
     allow="autoplay; fullscreen; vr"
     allowfullscreen
     style="width:100%; height:480px; border-radius:12px;">
-  </iframe>`);
+    </iframe>`);
     body.append(Model3d);
     }
 
+    const commentForm = $(`
+    <div style="margin-top:10px;">
+    <h2>Komentar</h2>
+      <input id="namaInput" type="text" placeholder="Nama" style="width:100%;padding:8px;margin-bottom:10px;border-radius:8px;border:1px solid #ccc;">
+      <textarea id="komentarInput" placeholder="komentar" style="width:100%;padding:8px;border-radius:8px;border:1px solid #ccc;min-height:80px;"></textarea>
+      <button id="submitKomentar" style="margin-top:10px;padding:8px 16px;color:black;border:none;border-radius:8px;cursor:pointer;">Kirim Komentar</button>
+    </div>
+  `);
+  body.append(commentForm);
+
+  // Tempat daftar komentar
+  const daftarKomentar = $(`<div id="daftarKomentar" style="margin-top:20px;"></div>`);
+  body.append(daftarKomentar);
+
+  const KataKunci = `komentar_${rumah.nama}`;
+  const komentarList = JSON.parse(localStorage[KataKunci] || "[]");
+
+
+  function tampilkanKomentar() {
+    daftarKomentar.empty();
+    if (komentarList.length === 0) {
+      daftarKomentar.append(`<p style="color:gray;">Belum ada komentar.</p>`);
+    } else {
+      komentarList.forEach(k => {
+        daftarKomentar.append(`
+          <div style="border:1px solid #ddd;border-radius:8px;padding:8px;margin-bottom:8px;">
+            <strong>${k.nama}</strong><br>
+            <p style="margin-top:4px;">${k.isi}</p>
+          </div>
+        `);
+      });
+    }
+  }
+
+  tampilkanKomentar();
+
+  // Event submit komentar
+  $("#submitKomentar").off("click").on("click", function () {
+    const nama = $("#namaInput").val().trim();
+    const isi = $("#komentarInput").val().trim();
+    if (nama!== null && isi!== null) {
+      komentarList.push({ nama, isi });
+      localStorage.setItem(KataKunci, JSON.stringify(komentarList));
+      $("#namaInput").val("");
+      $("#komentarInput").val("");
+      tampilkanKomentar();
+    } else {
+      alert("Nama dan komentar tidak boleh kosong!");
+    }
+  });
+
     // tampilkan konten
     popup.addClass("show");
+
     $(".close").off("click").on("click", function() {
         popup.removeClass("show");
     });
 }
+
 function getFavorites() {
     const favorites = localStorage.getItem('rumahAdatFavorit');
     return favorites ? JSON.parse(favorites) : [];
