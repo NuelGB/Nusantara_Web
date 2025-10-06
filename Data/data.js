@@ -478,8 +478,8 @@ const rumah_adat = [
   {
     nama: "Rumah Osing",
     provinsi: "Jawa Timur",
-   model3d: "https://sketchfab.com/3d-models/rumah-adat-osing-5d19da76945f4447a747e315a5a6e66f",
-    gambar: "https://image.idntimes.com/post/20190723/sade-00499abad3ffcce1a0ed53acd1e4269a.jpg",
+    model3d: "https://sketchfab.com/3d-models/rumah-adat-osing-5d19da76945f4447a747e315a5a6e66f",
+    gambar: "https://beritajatim.com/wp-content/uploads/2024/06/Desa-Wisata-Osing-Kemiren.webp",
     penjelasan: "Rumah adat Osing adalah rumah tradisional suku Osing di Banyuwangi yang mencerminkan gaya hidup dan nilai budaya lokal.",
     ciriArsitektur:"Bentuk rumah panggung, dinding anyaman bambu (gedheg), atap limasan atau joglo, serta halaman luas.",
     fungsiRuang: "Tempat menerima tamu dan ruang publik; juga untuk kegiatan adat. Bale bersifat lebih terbuka dan publik dibanding bagian dalam",
