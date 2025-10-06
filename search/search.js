@@ -145,11 +145,23 @@ function DetailRumahAdat(rumah) {
     const refTitle = $(`<p><strong>📚 Referensi:</strong></p><br>`);
     body.append(refTitle);
 
-    const Refrensi = $(`<ul style="margin-left:20px;"></ul>`);
+    const Refrensi = $(`<ul style="margin-left:20px;margin-bottom:20px;"></ul>`);
     rumah.referensi.forEach(ref => {
         Refrensi.append(`<li>${ref}</li>`);
     });
     body.append(Refrensi);
+
+    //model 3d (jika ada)
+    if (rumah.model3d !== undefined && rumah.model3d !== null && rumah.model3d !== "") {
+    const Model3d = $(`<iframe
+    src="${rumah.model3d}/embed"
+    frameborder="0"
+    allow="autoplay; fullscreen; vr"
+    allowfullscreen
+    style="width:100%; height:480px; border-radius:12px;">
+  </iframe>`);
+    body.append(Model3d);
+    }
 
     // tampilkan konten
     popup.addClass("show");
