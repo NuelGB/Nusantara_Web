@@ -364,7 +364,6 @@ const rumah_adat = [
     nama: "Rumah Banjar Bubungan Tinggi",
     provinsi: "Kalimantan Selatan",
      model3d: "https://sketchfab.com/3d-models/bubungan-tinggi-rumah-adat-kalimantan-selatan-c9ede9be05f74d57b6170d212a5fada7",
-    model3d: "https://sketchfab.com/3d-models/rumah-banjar-55f3578178354de999ff200eea3ad0e8",
     gambar: "../assets/images/rumah_adat_kalimantan_selatan.jpg",
     penjelasan: "Rumah Bubungan Tinggi adalah rumah adat suku Banjar yang paling terkenal dan menjadi simbol arsitektur tradisional Kalimantan Selatan. Nama 'bubungan tinggi' mengacu pada bentuk atap segitiga yang menjulang tajam, mencerminkan status sosial tinggi dan nilai religiusitas.",
     ciriArsitektur: "Memiliki struktur atap tajam dan tinggi di bagian tengah, dengan bangunan memanjang ke belakang. Terbuat dari kayu ulin, dengan ornamen khas Banjar seperti ukiran 'tapih bahalai'. Jendela tinggi dan pintu utama berada di tengah.",
@@ -479,7 +478,7 @@ const rumah_adat = [
   {
     nama: "Rumah Osing",
     provinsi: "Jawa Timur",
-    model3d: "https://sketchfab.com/3d-models/rumah-buton-indonesia-option-3-ca7e608b31fe44c8af22942f4f0b32b5",
+   model3d: "https://sketchfab.com/3d-models/rumah-adat-osing-5d19da76945f4447a747e315a5a6e66f",
     gambar: "https://image.idntimes.com/post/20190723/sade-00499abad3ffcce1a0ed53acd1e4269a.jpg",
     penjelasan: "Rumah adat Osing adalah rumah tradisional suku Osing di Banyuwangi yang mencerminkan gaya hidup dan nilai budaya lokal.",
     ciriArsitektur:"Bentuk rumah panggung, dinding anyaman bambu (gedheg), atap limasan atau joglo, serta halaman luas.",
