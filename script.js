@@ -83,7 +83,19 @@ function showDetailPopup(rumah) {
          Refrensi.append(`<li>Tidak ada referensi tersedia.</li>`);
     }
     
+
     body.append(Refrensi);
+
+     if (rumah.model3d !== undefined && rumah.model3d !== null && rumah.model3d !== "") {
+    const Model3d = $(`<iframe
+    src="${rumah.model3d}/embed"
+    frameborder="0"
+    allow="autoplay; fullscreen; vr"
+    allowfullscreen
+    style="width:100%; height:480px; margin-top:20px; border-radius:12px;">
+  </iframe>`);
+    body.append(Model3d);
+    }
 
     popup.addClass("show");
 
