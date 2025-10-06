@@ -10,7 +10,6 @@ body, html {
     color: white; 
 }
 
-/* Video Background Styling */
 .video-background {
     position: fixed;
     top: 0;
@@ -27,38 +26,41 @@ body, html {
     object-fit: cover; 
 }
 
-/* Content Overlay: Hapus z-index: -1 */
 .content-overlay {
     position: relative;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.5); 
     display: flex;
     flex-direction: column;
 }
 
-/* Navbar Styling */
+.navbar-spacer {
+    height: 70px; 
+    width: 100%;
+    background-color: transparent; 
+}
+
 .navbar {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px; 
-    background-color: rgba(0, 0, 0, 0.3); 
+    background-color: rgba(0, 0, 0, 1.0); 
+    
     position: fixed;
     top: 0;
-    z-index: 1000;
+    z-index: 9999; 
 }
 
-/* Pemosisian Logo di Tengah (Desktop) */
 .left-placeholder {
-    width: 33%; /* Ambil ruang kosong yang sama dengan lebar menu kanan */
-    /* HANYA MUNCUL DI DESKTOP */
+    width: 33%; 
 }
 
 .navbar-logo {
-    flex-grow: 1; /* Biarkan logo mengambil ruang yang tersisa */
-    text-align: center; /* Posisikan teks di tengah */
+    flex-grow: 1; 
+    text-align: center;
 }
 
 .navbar-logo a {
@@ -76,7 +78,7 @@ body, html {
 
 .nav-links li a {
     text-decoration: none;
-    color: #fff;
+    color: #fff !important; 
     font-size: 1em;
     padding-bottom: 5px;
     transition: border-bottom 0.2s; 
@@ -85,16 +87,13 @@ body, html {
 .nav-links li a:hover {
     border-bottom: 2px solid #fff; 
 }
-
-/* Sesuaikan lebar kanan agar seimbang dengan placeholder kiri */
 .right-navbar {
     display: flex;
     align-items: center;
-    width: 33%; /* Beri lebar yang sama dengan .left-placeholder */
-    justify-content: flex-end; /* Dorong menu ke sisi paling kanan */
+    width: 33%; 
+    justify-content: flex-end; 
 }
 
-/* Sembunyikan Hamburger Icon di Desktop (dengan !important untuk mengatasi konflik Font Awesome) */
 .hamburger-icon {
     display: none !important; 
     font-size: 1.5em;
@@ -102,17 +101,15 @@ body, html {
     color: #fff;
 }
 
-/* Konten Utama */
 .container {
     flex-grow: 1; 
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .welcome {
     text-align: center;
-    padding: 0 20px;
+    padding: 0 20px 50px; 
     max-width: 800px; 
 }
 
@@ -127,73 +124,15 @@ body, html {
     text-align: justify;
 }
 
-/* Responsive (Tampilan Mobile) */
-@media (max-width: 768px) {
-    .navbar {
-        padding: 15px 20px; 
-    }
-    
-    /* HILANGKAN placeholder di mobile */
-    .left-placeholder {
-        display: none;
-    }
-
-    /* Kembalikan logo dan kanan ke lebar otomatis (agar logo di kiri dan hamburger di kanan) */
-    .navbar-logo {
-        width: auto; 
-        text-align: left;
-    }
-
-    .right-navbar {
-        width: auto;
-    }
-
-    /* Sembunyikan menu utama di mobile secara default */
-    .nav-links {
-        display: none; 
-        flex-direction: column;
-        position: absolute;
-        top: 60px; 
-        right: 0;
-        width: 100%; 
-        background-color: rgba(0, 0, 0, 0.9); 
-        padding: 10px 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    /* Tampilkan menu saat class 'active' ditambahkan */
-    .nav-links.active {
-        display: flex; 
-    }
-
-    .nav-links li {
-        text-align: center;
-        padding: 15px 0;
-    }
-    
-    /* Tampilkan Hamburger Icon di Mobile */
-    .hamburger-icon {
-        display: block !important; 
-    }
-
-    .welcome h1 {
-        font-size: 2em;
-    }
-
-    .welcome p {
-        font-size: 1em;
-    }
-}
-
-/* Styling untuk Bagian About dan Favorit di Home */
 .home-section {
     padding: 40px 50px;
     margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.6); 
+    background-color: rgba(0, 0, 0, 0.8); 
     border-radius: 8px;
     max-width: 1000px; 
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 50px;
 }
 
 .section-title {
@@ -226,7 +165,6 @@ body, html {
     background-color: #f60000e9;
 }
 
-/* Styling untuk Daftar Favorit di Home */
 #favorit-list {
     display: flex;
     flex-wrap: wrap;
@@ -235,84 +173,144 @@ body, html {
 }
 
 .favorit-item {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: #222; 
+    border: 1px solid #444; 
     border-radius: 8px;
-    padding: 15px;
+    padding: 10px; 
     width: 280px;
     text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .favorit-item img {
     width: 100%;
     height: 150px;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 4px;
     margin-bottom: 10px;
 }
 
 .favorit-item .item-info {
     color: white;
+    padding: 5px 0;
 }
 
-.unfavorit-btn {
-    background-color: #f44336;
-    color: white;
+.favorit-item .item-info b.namarumahadat {
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 3px;
+    color: #fff; 
+}
+
+.favorit-item .item-info p.provinsi {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.favorit-item button {
     padding: 8px 15px;
-    margin-top: 10px;
+    margin: 4px auto; 
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
     transition: background-color 0.3s;
+    width: 90%; 
+    display: block;
+}
+
+.detail-favorit-btn {
+    background-color: #818181; 
+    color: white;
+}
+
+.detail-favorit-btn:hover {
+    background-color: #1e7e34;
+}
+
+.unfavorit-btn {
+    background-color: #dc3545; 
+    color: white;
 }
 
 .unfavorit-btn:hover {
-    background-color: #da190b;
+    background-color: #bd2130;
 }
 
-/* -------------------------------------- */
-/* Styling untuk Pop-up Notifikasi Kustom */
-/* -------------------------------------- */
 .custom-popup {
-    display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #ffffff;
     color: #333;
     padding: 15px 25px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     z-index: 10000;
     font-size: 1.1em;
-    transform: translateY(100%);
-    transition: transform 0.4s ease-out, border-color 0.4s;
-    border-left: 5px solid; /* Warna border akan diatur oleh JS (merah/hijau) */
-    
+    transform: translateY(100%); 
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.4s;
+    border-left: 5px solid; 
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .custom-popup.show {
-    display: flex;
-    align-items: center;
     transform: translateY(0);
+    opacity: 1;
 }
 
-#custom-popup-icon {
-    margin-right: 10px;
-    font-size: 1.4em;
+.custom-popup.success {
+    background-color: #e6ffe6; 
+    border-color: green;
+}
+.custom-popup.error {
+    background-color: #ffe6e6; 
+    border-color: red;
 }
 
-.fa-check-circle {
-    color: green;
-}
+.custom-popup.success #custom-popup-icon { color: green; }
+.custom-popup.error #custom-popup-icon { color: red; }
 
-.fa-exclamation-circle {
-    color: red;
-}
-
-
-/* Media Query untuk Favorit dan About */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px; 
+    }
+    
+    .left-placeholder {
+        display: none;
+    }
+    
+    .right-navbar {
+        width: auto;
+    }
+
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 60px; 
+        right: 0;
+        width: 100%; 
+        background-color: rgba(0, 0, 0, 0.9); 
+        padding: 10px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex; 
+    }
+    
+    .hamburger-icon {
+        display: block !important; 
+    }
+    
+    .welcome {
+        padding: 80px 10px 30px;
+    }
+
     .home-section {
         padding: 20px;
     }
@@ -323,7 +321,7 @@ body, html {
     }
     
     .favorit-item {
-        width: 100%; /* Lebar penuh di mobile */
+        width: 100%; 
     }
     
     .custom-popup {

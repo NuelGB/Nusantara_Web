@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nusantara Web</title>
     <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="search/search.css"> 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -27,10 +28,13 @@
                 <ul class="nav-links">
                     <li><a href="Home.html">Home</a></li>
                     <li><a href="search/search.html">Search</a></li>
+                    <li><a href="#favorit-section">Favorit</a></li>
                 </ul> 
                 <i class="fas fa-bars hamburger-icon"></i>
             </div>  
         </nav>
+        
+        <div class="navbar-spacer"></div>
 
         <div class="container">
             <div class="welcome">
@@ -41,19 +45,20 @@
                 <button id="about-btn" class="about-button">About Us</button> 
             </div>
         </div>
-
-        <div class="home-section" id="favorit-section">
-            <h2 class="section-title">Rumah Adat Favorit Anda ~</h2>
-            <div id="favorit-list">
-                </div>
-            <p id="no-favorit-msg" style="text-align: center; color: #fff; display: none;">Anda belum menambahkan rumah adat ke favorit.</p>
-        </div>
         
         <div class="home-section" id="about-section" style="display: none;">
             <h2 class="section-title">Tentang Nusantara Web</h2>
             <div class="about-content">
                 <p>Nusantara Web didedikasikan untuk melestarikan dan memperkenalkan warisan arsitektur tradisional Indonesia. Kami percaya bahwa setiap rumah adat adalah cerminan dari kearifan lokal, sejarah, dan filosofi hidup masyarakatnya. Misi kami adalah menjadi jembatan antara kekayaan budaya masa lalu dan generasi digital masa kini.</p>
                 <b><p>Mari kita bersama jelajahi, pelajari, dan cintai keberagaman arsitektur Nusantara!</p></b>
+            </div>
+        </div>
+        
+        <div id="favorit-section" class="home-section" style="min-height: 200px;">
+            <h2 class="section-title">Rumah Adat Favorit Anda ~</h2>
+            <p id="no-favorit-msg" style="text-align: center; color: #fff; display: none;">Anda belum menambahkan rumah adat ke favorit.</p>
+            
+            <div id="favorit-list" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
             </div>
         </div>
         
@@ -64,7 +69,16 @@
         <span id="custom-popup-message"></span>
     </div>
     
+    <div id="detail" class="popup">
+      <div class="KontentRumahAdat">
+        <span class="close">&times;</span>
+        <div id="popupBody">
+        </div>
+      </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/Data/data.js"></script> 
     <script src="script.js"></script> 
 </body>
 </html>
