@@ -1,1 +1,0 @@
-// ini nantinya untuk fungsi bookmark/favorit
