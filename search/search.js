@@ -1,5 +1,6 @@
+//fungsi untuk menampilkan semua rumah adat
 function tampilkanrumah_adat(rumah_adat) {
-  $('#hasil').empty();
+$('#hasil').empty();
 $('#judul').append('<h1> Daftar Rumah Adat di Indonesia</h1> ')
   rumah_adat.forEach((r) => {
  const row = $('<div class="item"></div>');
@@ -14,7 +15,11 @@ $('#judul').append('<h1> Daftar Rumah Adat di Indonesia</h1> ')
  row.append(provinsi);
 
  const Detail = $(`<button>Lihat Detail</button>`);
- row.append(Detail);
+
+ Detail.click(() => {
+ DetailRumahAdat(r);
+ });
+  row.append(Detail);
 
  const Favorit = $(`<button>Tambah Favorit</button>`);
  row.append(Favorit);
@@ -28,6 +33,7 @@ $(function () {
 });
 
 
+//fungsi search 
 $('#Submit').click((e) => {
   e.preventDefault(); 
 
@@ -73,6 +79,9 @@ $('#Submit').click((e) => {
     row.append(provinsi);
 
     const Detail = $(`<button>Lihat Detail</button>`);
+    Detail.click(() => {
+    DetailRumahAdat(r);
+    });
     row.append(Detail);
 
     const Favorit = $(`<button>Tambah Favorit</button>`);
@@ -88,3 +97,58 @@ $('#Submit').click((e) => {
     .append('Cari');
 });
 
+// fungsi menampilkan detail konten rumah adat
+function DetailRumahAdat(rumah) {
+  const popup = $("#detail");
+  const body = $("#popupBody");
+
+  // kosongkan isi sebelumnya
+  body.empty();
+
+  // judul
+  const nama = $(`<h2>🛖 ${rumah.nama}</h2>`);
+  body.append(nama);
+
+  // provinsi
+  const prov = $(`<p><strong>📍 Provinsi:</strong> ${rumah.provinsi}</p><br>`);
+  body.append(prov);
+
+  // gambar
+  const gambar = $(`<img src="${rumah.gambar}" alt="${rumah.nama}" 
+    style="width:100%;border-radius:10px;margin:10px;height:250px;object-fit:cover;">`);
+  body.append(gambar);
+
+  // ciri arsitektur
+  const arsitektur = $(`<p><strong>🧱 Ciri Arsitektur:</strong> ${rumah.ciriArsitektur}</p><br>`);
+  body.append(arsitektur);
+
+  // fungsi ruang
+  const fungsi = $(`<p><strong>🛖 Fungsi Ruang:</strong> ${rumah.fungsiRuang}</p><br>`);
+  body.append(fungsi);
+
+  // filosofi
+  const filosofi = $(`<p><strong>🍂 Filosofi:</strong> ${rumah.filosofi}</p><br>`);
+  body.append(filosofi);
+
+  // penggunaan
+  const penggunaan = $(`<p><strong>🛠️ Penggunaan:</strong> ${rumah.penggunaan}</p><br>`);
+  body.append(penggunaan);
+
+  // referensi
+  const refTitle = $(`<p><strong>📚 Referensi:</strong></p><br>`);
+  body.append(refTitle);
+
+  const Refrensi = $(`<ul style="margin-left:20px;"></ul>`);
+  rumah.referensi.forEach(ref => {
+    Refrensi.append(`<li>${ref}</li>`);
+  });
+  body.append(Refrensi);
+
+  // tampilkan konten
+  popup.addClass("show");
+
+  // tombol close
+  $(".close").off("click").on("click", function() {
+    popup.removeClass("show");
+  });
+}
