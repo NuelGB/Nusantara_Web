@@ -85,6 +85,6 @@ $('#Submit').click((e) => {
   $('#Submit')
     .empty()
     .removeAttr('disabled')
-    .append('Search');
+    .append('Cari');
 });
 
