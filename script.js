@@ -97,6 +97,67 @@ function showDetailPopup(rumah) {
     body.append(Model3d);
     }
 
+    
+    const commentForm = $(`
+    <div style="margin-top:10px;">
+    <h2>Komentar</h2>
+      <input id="namaInput" type="text" placeholder="Nama" style="width:100%;padding:8px;margin-bottom:10px;border-radius:8px;border:1px solid #ccc;">
+      <textarea id="komentarInput" placeholder="komentar" style="width:100%;padding:8px;border-radius:8px;border:1px solid #ccc;min-height:80px;"></textarea>
+      <button id="submitKomentar" style="margin-top:10px;padding:8px 16px;color:black;border:none;border-radius:8px;cursor:pointer;">Kirim Komentar</button>
+    </div>
+  `);
+  body.append(commentForm);
+
+  // Tempat daftar komentar
+  const daftarKomentar = $(`<div id="daftarKomentar" style="margin-top:20px;"></div>`);
+  body.append(daftarKomentar);
+
+  const KataKunci = `komentar_${rumah.nama}`;
+  const komentarList = JSON.parse(localStorage[KataKunci] || "[]");
+
+
+  function tampilkanKomentar() {
+    daftarKomentar.empty();
+    if (komentarList.length === 0) {
+      daftarKomentar.append(`<p style="color:gray;">Belum ada komentar.</p>`);
+    } else {
+      komentarList.forEach(komentar => {
+        daftarKomentar.append(`
+          <div style="border:1px solid #ddd;border-radius:8px;padding:8px;margin-bottom:8px;">
+            <strong>${komentar.nama}</strong><br>
+            <p style="margin-top:4px;">${komentar.isi}</p>
+          </div>
+        `);
+      });
+    }
+  }
+
+  tampilkanKomentar();
+
+  // Event submit komentar
+  $("#submitKomentar").off("click").on("click", function () {
+    const nama = $("#namaInput").val();
+    const isi = $("#komentarInput").val();
+    if (nama!== null && isi!== null) {
+      komentarList.push({ nama, isi });
+      localStorage.setItem(KataKunci, JSON.stringify(komentarList));
+      $("#namaInput").val("");
+      $("#komentarInput").val("");
+      tampilkanKomentar();
+    } else {
+      alert("Nama dan komentar tidak boleh kosong!");
+    }
+  });
+
+    // tampilkan konten
+    popup.addClass("show");
+
+    $(".close").off("click").on("click", function() {
+        popup.removeClass("show");
+    });
+
+
+
     popup.addClass("show");
 
     $(".close").off("click").on("click", function() {
