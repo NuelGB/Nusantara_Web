@@ -1,4 +1,4 @@
- const traditionalHouses = [
+ const model3d = [
             {
                 name: "Rumah Krong Bade",
                 province: "Aceh",
