@@ -101,8 +101,10 @@ function showDetailPopup(rumah) {
     const commentForm = $(`
     <div style="margin-top:10px;">
     <h2>Komentar</h2>
-      <input id="namaInput" type="text" placeholder="Nama" style="width:100%;padding:8px;margin-bottom:10px;border-radius:8px;border:1px solid #ccc;">
-      <textarea id="komentarInput" placeholder="komentar" style="width:100%;padding:8px;border-radius:8px;border:1px solid #ccc;min-height:80px;"></textarea>
+      <input id="namaInput" type="text" placeholder="Nama"  
+      style="width:100%;padding:8px;margin-bottom:10px;border-radius:8px;border:1px solid #ccc;">
+      <textarea id="komentarInput" placeholder="komentar"  
+      style="width:100%;padding:8px;border-radius:8px;border:1px solid #ccc;min-height:80px;"></textarea>
       <button id="submitKomentar" style="margin-top:10px;padding:8px 16px;color:black;border:none;border-radius:8px;cursor:pointer;">Kirim Komentar</button>
     </div>
   `);
@@ -153,7 +155,7 @@ function showDetailPopup(rumah) {
   $("#submitKomentar").off("click").on("click", function () {
     const nama = $("#namaInput").val();
     const isi = $("#komentarInput").val();
-    if (nama!== null && isi!== null) {
+    if (nama !== "" && isi !== "") {
       let komentarList = JSON.parse(localStorage.getItem(KataKunci)||"[]")//update data komentar terbaru sebelum ditambah
       komentarList.push({ nama, isi });
       localStorage.setItem(KataKunci, JSON.stringify(komentarList));

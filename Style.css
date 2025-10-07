@@ -225,6 +225,14 @@ body, html {
     color: white;
 }
 
+.cari{
+   
+    color: rgb(255, 255, 255);
+    width:20%;
+    text-decoration: none;
+    border-radius: 999px;
+}
+
 .detail-favorit-btn:hover {
     background-color: #1e7e34;
 }
