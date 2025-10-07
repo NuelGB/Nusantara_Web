@@ -282,6 +282,12 @@ body, html {
 .custom-popup.success #custom-popup-icon { color: green; }
 .custom-popup.error #custom-popup-icon { color: red; }
 
+#Kuis{
+    text-align: center;
+}
+
+
+
 @media (max-width: 768px) {
     .navbar {
         padding: 15px 20px; 

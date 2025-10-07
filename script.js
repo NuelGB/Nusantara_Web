@@ -267,3 +267,118 @@ function loadFavoritesHome() {
         }
     });
 }
+
+const Pertanyaan = [
+            {
+                question: "Apa nama rumah adat dari provinsi Aceh?",
+                options: ["Rumah Gadang", "Rumah Krong Bade", "Rumah Joglo", "Rumah Betang"],
+                answer: 1
+            },
+            {
+                question: "Rumah Gadang berasal dari provinsi mana?",
+                options: ["Sumatera Barat", "Jawa Tengah", "Sulawesi Selatan", "Papua"],
+                answer: 0
+            },
+            {
+                question: "Rumah adat Jawa Tengah adalah",
+                options: ["Rumah Joglo", "Rumah Limas", "Rumah Betang", "Rumah Tongkonan"],
+                answer: 0
+            },
+            {
+                question: "Rumah adat Minangkabau memiliki atap berbentuk?",
+                options: ["Perahu", "Tanduk Kerbau", "Limas", "Segitiga"],
+                answer: 1
+            },
+            {
+                question: "Rumah Limas merupakan rumah adat dari?",
+                options: ["Sumatera Selatan", "Riau", "Jambi", "Kalimantan Tengah"],
+                answer: 0
+            },
+            {
+                question: "Rumah Betang adalah rumah panjang yang dihuni oleh suku?",
+                options: ["Dayak", "Toraja", "Bugis", "Osing"],
+                answer: 0
+            },
+            {
+                question: "Rumah Tongkonan memiliki atap menyerupai?",
+                options: ["Limas", "Perahu", "Tanduk", "Segitiga"],
+                answer: 1
+            },
+            {
+                question: "Rumah Honai berasal dari daerah?",
+                options: ["Papua", "Sulawesi Selatan", "Jawa Timur", "Bali"],
+                answer: 0
+            },
+            {
+                question: "Rumah Lamin adalah rumah adat dari suku?",
+                options: ["Dayak Kenyah", "Bugis", "Betawi", "Osing"],
+                answer: 0
+            },
+            {
+                question: "Rumah Baileo digunakan sebagai?",
+                options: ["Balai pertemuan adat", "Tempat tinggal", "Gudang", "Istana"],
+                answer: 0
+            },
+        ];
+
+$(document).ready(function () {
+
+  //menampilkan pertanyaan
+  function tampilkanKuis() {
+    const quizContainer = $("#quizContainer");
+    quizContainer.empty();
+
+    $.each(Pertanyaan, function (Nomor, q) {
+      const isi = $(`
+        <div style="margin-bottom:15px;">
+          <p>${Nomor + 1}. ${q.question}</p>
+          ${q.options.map((pilihan, Jawaban) => `
+            <label style="display:block; margin-left:10px;">
+              <input type="radio" name="q${Nomor}" value="${Jawaban}"> ${pilihan}
+            </label>
+          `).join("")}
+        </div>
+      `);
+      quizContainer.append(isi);
+    });
+
+    quizContainer.show();//pertanyaan quiz ditunjukkan
+    $("#SubmitKuis").show();//tombol submit ditunjukkan
+    $("#Kerjakan").hide();//tombol kerjakan quiz disembunyikan
+    $("#hasilKuis").hide();// hasil quiz disembunyikan
+    $("#UlangiKuis").hide();//tombol ulangi quiz disembunyikan
+  }
+
+  // event tombol "Kerjakan Kuis"
+  $("#Kerjakan").on("click", function () {
+    tampilkanKuis();
+  });
+
+  // event Tombol "Submit" 
+  $("#SubmitKuis").on("click", function () {
+    let skor = 0;
+
+    $.each(Pertanyaan, function (i, q) {
+      const jawaban = $(`input[name="q${i}"]:checked`).val();
+      if (jawaban == q.answer) {
+        skor++;
+      }
+    });
+
+ const nilai = (skor / Pertanyaan.length) * 100;
+
+$("#hasilKuis")
+  .empty()
+  .append(`<p>Nilai Anda: ${nilai.toFixed(0)}</p>`)
+  .show(); 
+
+    $("#quizContainer").hide();
+    $("#SubmitKuis").hide();// tombol submit disembunyikan
+    $("#UlangiKuis").show(); // tampilkan tombol ulang
+  });
+
+  //Event Tombol "Kerjakan Ulang" 
+  $("#UlangiKuis").on("click", function () {
+    tampilkanKuis(); // tampilkan kuis lagi dari awal
+  });
+});
