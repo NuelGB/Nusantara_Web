@@ -1,4 +1,4 @@
- *{
+*{
     margin: 0;
     padding: 0;
 }
@@ -33,26 +33,26 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-.DetailRumah{
- padding: 8px 15px;
-    margin: 4px auto; 
+.DetailRumah, .tambah-favorit {
+    padding: 8px 15px;
+    margin: 4px auto;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
-    width: 90%; 
+    width: 90%;
     display: block;
+    color: white; 
+    background-color: #818181; 
+    transition: background-color 0.3s; 
 }
 
-.tambah-favorit{
- padding: 8px 15px;
-    margin: 4px auto; 
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    width: 90%; 
-    display: block;
+.DetailRumah:hover {
+    background-color: #007bff;
+}
+
+.tambah-favorit:hover {
+    background-color: #1e7e34;
 }
 
 .item img {
@@ -70,7 +70,7 @@ nav {
   z-index: 1000;
   border: 1px solid #000000;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.7); /* 0.7 = 70% opacity */
+  background-color: rgba(0, 0, 0, 0.7); 
   color: white;
   backdrop-filter: blur(5px);
 }
@@ -194,8 +194,6 @@ body {
   border: 2px solid #000000;
   padding: 20px;
   width : 50%;
-
-  /* agar bisa di scroll */
   height: 600px;
   overflow-y: auto;
 
