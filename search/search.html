@@ -8,19 +8,30 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
-<nav class ="navbar">
-    
-    <h3>NusantaraWeb</h3>
-    
-    <div class="right-navbar">
-        <i class="fas fa-bars"></i>
+<nav class="navbar">
+  <div class="left-placeholder"></div>
+
+  <div class="navbar-logo">
+                <a href="Home.html">Nusantara Web</a>
+  </div>
+
+  <div class="right-navbar">
     <ul class="nav-links">
-        <li><a href="/Home.html">Home</a></li>
-        <li><a href="/search/search.html">Search</a></li>
-    </ul> 
-    </div>  
+      <li><a href="../Home.html">Home</a></li>
+      <li><a href="../search/search.html">Search</a></li>
+      <li><a href="../Home.html#favorit-section">Favorit</a></li>
+      <li><a href="../Home.html#Kuis">Kuis</a></li>
+    </ul>
+    <i class="fas fa-bars hamburger-icon"></i>
+  </div>
 </nav>
+
 <body>
+
+    <video autoplay muted loop id="bg-video">
+    <source src="/assets/bgvideo.mp4" type="video/mp4">
+  </video>
+
     <div id="search">
     <input type="text" placeholder="Search..." class="search-input" id="input">
     <select id="province-filter">

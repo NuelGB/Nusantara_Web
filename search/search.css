@@ -9,12 +9,50 @@
     gap: 20px;
     padding: 20px;
 }
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1; 
+  object-fit: cover; 
+}
 
 .item {
     text-align: center;
-    height:250px;
+    height:300px;
     margin-bottom:30px;
     border: 1px solid rgb(0, 0, 0);
+    color:white;
+    background-color: #222; 
+    border: 1px solid #444; 
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.DetailRumah{
+ padding: 8px 15px;
+    margin: 4px auto; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 90%; 
+    display: block;
+}
+
+.tambah-favorit{
+ padding: 8px 15px;
+    margin: 4px auto; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 90%; 
+    display: block;
 }
 
 .item img {
@@ -23,18 +61,31 @@
     width: 100%;
 }
 
-nav{
+nav {
   width: 100%;
   display: flex;
   justify-content: space-between;  
-  padding : 10px 10px;
+  padding: 10px 10px;
   top: 0;
   z-index: 1000;
   border: 1px solid #000000;
-  position:fixed;
-  background-color: aliceblue;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7); /* 0.7 = 70% opacity */
+  color: white;
+  backdrop-filter: blur(5px);
 }
 
+.navbar-logo {
+    flex-grow: 1; 
+    text-align: center;
+}
+
+.navbar-logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em; 
+    font-weight: bold;
+}
 
 .nav-links {
   list-style: none;
@@ -45,15 +96,15 @@ nav{
 }
 
 
-.nav-links li a {
+nav a {
+  color: white; 
   text-decoration: none;
-  color: #333;
+  font-weight: bold;
 }
 
 body {
-  background-size: cover;
-  background-repeat: no-repeat;
   margin-top:20px;
+  color:white;
 }
 
 .right-navbar {
