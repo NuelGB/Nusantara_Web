@@ -13,7 +13,7 @@ function tampilkanrumah_adat(rumah_adat) {
         const provinsi = $(`<p class="provinsi">${r.provinsi}</p>`);
         row.append(provinsi);
 
-        const Detail = $(`<button>Lihat Detail</button>`);
+        const Detail = $(`<button class="DetailRumah">Lihat Detail</button>`);
         Detail.click(() => {
             if (typeof showDetailPopup === 'function') {
                 showDetailPopup(r);
@@ -83,7 +83,7 @@ $('#Submit').click((e) => {
             const provinsi = $(`<p class="provinsi">${r.provinsi}</p>`);
             row.append(provinsi);
 
-            const Detail = $(`<button>Lihat Detail</button>`);
+            const Detail = $(`<button class="DetailRumah">Lihat Detail</button>`);
             Detail.click(() => {
                  if (typeof showDetailPopup === 'function') {
                     showDetailPopup(r);
@@ -122,7 +122,7 @@ function DetailRumahAdat(rumah) {
 
     // gambar
     const gambar = $(`<img src="${rumah.gambar}" alt="${rumah.nama}" 
-        style="width:100%;border-radius:10px;margin:10px;height:250px;object-fit:cover;">`);
+        style="width:100%;border-radius:10px;margin:10px;height:400px;object-fit:cover;">`);
     body.append(gambar);
 
     // ciri arsitektur
