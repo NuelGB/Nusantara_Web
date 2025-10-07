@@ -370,11 +370,25 @@ $(document).ready(function () {
 $("#hasilKuis")
   .empty()
   .append(`<p>Nilai Anda: ${nilai.toFixed(0)}</p>`)
+  .append(`<p>Riwayat  pengerjaan sudah disimpan</p>`)
   .show(); 
 
     $("#quizContainer").hide();
     $("#SubmitKuis").hide();// tombol submit disembunyikan
     $("#UlangiKuis").show(); // tampilkan tombol ulang
+
+     let riwayatKuis = JSON.parse(localStorage.getItem("riwayatKuis")) || [];
+
+    // Simpan data nilai dan waktu
+    riwayatKuis.push({
+        tanggal: new Date().toLocaleString(),
+        nilai: nilai.toFixed(0)
+    });
+
+    // Simpan ke localStorage
+    localStorage.setItem("riwayatKuis", JSON.stringify(riwayatKuis));
+
+    tampilkanRiwayatKuis();
   });
 
   //Event Tombol "Kerjakan Ulang" 
@@ -382,3 +396,32 @@ $("#hasilKuis")
     tampilkanKuis(); // tampilkan kuis lagi dari awal
   });
 });
+
+
+function tampilkanRiwayatKuis() {
+    const $isiRiwayat = $("#RiwayatKuis");
+    $isiRiwayat.empty();
+    $isiRiwayat.append("<h1>riwayat kuis</h1>");
+
+    let riwayatKuis = JSON.parse(localStorage.getItem("riwayatKuis")) || [];
+
+    if (riwayatKuis.length === 0) {
+        $isiRiwayat.append("<p>Belum ada riwayat kuis.</p>");
+        return;
+    }
+
+    riwayatKuis.forEach((r, index) => {
+        $isiRiwayat.append(`
+            <div class="riwayat-item">
+                <b>${index + 1}. Nilai: ${r.nilai}</b> <br>
+                <span>${r.tanggal}</span>
+            </div>
+        `);
+    });
+     $isiRiwayat.append(`<button id="HapusSemuaRiwayat">Hapus Semua Riwayat</button>`)
+     
+    $("#HapusSemuaRiwayat").on("click", function () {
+        localStorage.removeItem("riwayatKuis");
+        tampilkanRiwayatKuis();
+    });
+}
