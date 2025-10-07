@@ -116,21 +116,36 @@ function showDetailPopup(rumah) {
   const komentarList = JSON.parse(localStorage[KataKunci] || "[]");
 
 
-  function tampilkanKomentar() {
-    daftarKomentar.empty();
-    if (komentarList.length === 0) {
-      daftarKomentar.append(`<p style="color:gray;">Belum ada komentar.</p>`);
-    } else {
-      komentarList.forEach(komentar => {
-        daftarKomentar.append(`
-          <div style="border:1px solid #ddd;border-radius:8px;padding:8px;margin-bottom:8px;">
-            <strong>${komentar.nama}</strong><br>
-            <p style="margin-top:4px;">${komentar.isi}</p>
-          </div>
-        `);
-      });
-    }
+ function tampilkanKomentar() {
+  daftarKomentar.empty();
+
+  const komentarList = JSON.parse(localStorage.getItem(KataKunci) || "[]");
+
+  if (komentarList.length === 0) {
+    daftarKomentar.append(`<p>Belum ada komentar.</p>`);
+  } else {
+    komentarList.forEach((komentar, Nomor) => {
+      daftarKomentar.append(`
+        <div style="border:1px solid #ddd;border-radius:8px;padding:8px;margin-bottom:8px;">
+          nama : ${komentar.nama}
+          <button class="hapusKomen" style="background:red;color:white;cursor:pointer;float:right;">
+            Hapus
+          </button>
+          <p style="margin-top:4px;clear:both;">Komentar : ${komentar.isi}</p>
+        </div>
+      `);
+    });
+
+    // Event hapus komentar
+    $(".hapusKomen").off("click").on("click", function () {
+      const Nomor = $(this).data("Nomor");//mendapatkan Nomor ke berapa komentar mau dihapus
+      const updateKomentar = JSON.parse(localStorage.getItem(KataKunci) || "[]");//ambil data komentar yg disimpen di localstorage berdasarkan katakunci
+      updateKomentar.splice(Nomor, 1);//penghapusan komentar pada nomor tertentu
+      localStorage.setItem(KataKunci, JSON.stringify(updateKomentar));//setelah di hapus isi daftar komentar di update 
+      tampilkanKomentar();
+    });
   }
+}
 
   tampilkanKomentar();
 
@@ -139,6 +154,7 @@ function showDetailPopup(rumah) {
     const nama = $("#namaInput").val();
     const isi = $("#komentarInput").val();
     if (nama!== null && isi!== null) {
+      let komentarList = JSON.parse(localStorage.getItem(KataKunci)||"[]")//update data komentar terbaru sebelum ditambah
       komentarList.push({ nama, isi });
       localStorage.setItem(KataKunci, JSON.stringify(komentarList));
       $("#namaInput").val("");
