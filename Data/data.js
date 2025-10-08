@@ -13,7 +13,6 @@ const rumah_adat = [
       "Nasir, M. (2008). Simbolisme dan Makna Rumah Adat Aceh. Banda Aceh: Pustaka Ilmu"
     ],
     penggunaan: "Beberapa rumah asli masih ditemukan di daerah Aceh Besar, Aceh Tengah, dan Pidie. Kini, Rumoh Aceh juga dijadikan sebagai objek pelestarian budaya dan bahan pembelajaran arsitektur di perguruan tinggi.",
-    model3d: "https://sketchfab.com/3d-models/rumah-krong-bade-aceh-8d131cf689a64016aedf96875811c307",
   },
   
   {
@@ -35,7 +34,6 @@ const rumah_adat = [
   {
     nama: "Rumah Gadang",
     provinsi: "Sumatera Barat",
-    model3d: "https://sketchfab.com/3d-models/rumah-gadang-26f6966cbe2d494d9f72834d1ebb30dc",
     gambar: "../assets/images/rumah_adat_sumatera_barat.jpg",
     penjelasan: "Rumah Gadang merupakan rumah adat suku Minangkabau yang mencerminkan sistem kekerabatan matrilineal dan nilai-nilai budaya egaliter masyarakatnya. Rumah ini tidak hanya menjadi tempat tinggal, melainkan juga pusat kehidupan adat, tempat pengambilan keputusan, serta simbol identitas kaum dalam masyarakat Minang. Bentuk atapnya yang menyerupai tanduk kerbau (gonjong) melambangkan kekuatan dan kecerdikan, serta terinspirasi dari legenda adu kerbau antara Minangkabau dan kerajaan luar. Rumah Gadang diwariskan dari ibu kepada anak perempuan tertua sebagai penerus garis keturunan.",
     ciriArsitektur: "Rumah panggung dari kayu, beratap gonjong (tanduk kerbau) yang menjulang tajam, dengan ukiran khas Minang di dinding berupa motif flora dan filosofi adat. Bangunan memanjang ke samping mengikuti jumlah keluarga, berdiri di atas tiang tanpa paku, dan menghadap ke arah luar pekarangan.",
@@ -52,7 +50,6 @@ const rumah_adat = [
   {
     nama: "Rumah Melayu Selaso Jatuh Kembar",
     provinsi: "Riau",
-    model3d: "https://sketchfab.com/3d-models/rumah-adat-limas-potong-f94a8351b55b496f8e32e25d8f618e65",
     gambar: "../assets/images/rumah_adat_riau.jpg",
     penjelasan: "Rumah Melayu Selaso Jatuh Kembar merupakan simbol kearifan lokal dan adat istiadat masyarakat Melayu Riau. Dinamakan 'Selaso Jatuh Kembar' karena rumah ini memiliki dua lantai atau ruang yang tingginya tidak sama: bagian tengah lebih rendah dari ruang di sampingnya. Rumah ini tidak hanya berfungsi sebagai tempat tinggal, tetapi juga sebagai balai adat, tempat musyawarah, dan pelaksanaan upacara keagamaan serta budaya. Arsitekturnya mencerminkan nilai sopan santun, musyawarah, dan keharmonisan dalam adat Melayu.",
     ciriArsitektur: "Berbentuk rumah panggung dari kayu meranti atau ulin, beratap limas bersusun, memiliki tangga di bagian depan dan samping. Hiasan ukiran berwarna emas dan hijau menghiasi dinding dan tiang rumah, serta terdapat ornamen bulan sabit dan bunga tanjung yang sarat makna.",
@@ -85,7 +82,6 @@ const rumah_adat = [
   {
     nama: "Rumah Kajang Leko",
     provinsi: "Jambi",
-    model3d: "https://sketchfab.com/3d-models/rumah-adat-tradisional-jambi-kajang-lako-deb909440e9c4f1999a25d9e4434a424",
     gambar: "../assets/images/rumah_adat_jambi.jpg",
     penjelasan: "Rumah Kajang Leko merupakan rumah adat khas suku Melayu Jambi, terutama dari wilayah Kabupaten Batanghari. Rumah ini menggambarkan nilai adat, hierarki sosial, serta sistem gotong royong yang kuat dalam masyarakat Jambi. Nama 'kajang leko' merujuk pada bentuk atapnya yang khas, menyerupai kajang (penutup) dengan struktur memanjang. Rumah ini biasanya dibangun oleh kelompok keluarga besar dan dijadikan sebagai tempat tinggal serta pelaksanaan upacara adat.",
     ciriArsitektur: "Rumah panggung berbentuk persegi panjang, atap limas memanjang ke belakang, berbahan kayu tembesu atau meranti. Tiang-tiang besar menopang rumah, dan terdapat ukiran flora-fauna khas Jambi di dinding. Terdapat tangga utama di bagian depan.",
@@ -118,7 +114,6 @@ const rumah_adat = [
   {
     nama: "Rumah Limas",
     provinsi: "Sumatera Selatan",
-    model3d: "https://sketchfab.com/3d-models/malaysia-rumah-limas-potong-perak-6c6b3dff9c6145c6b0f67bd3e6d96095",
     gambar: "../assets/images/rumah_adat_sumatera_selatan.jpg",
     penjelasan: "Rumah Limas adalah rumah adat masyarakat Palembang, Sumatera Selatan, yang mencerminkan status sosial dan nilai filosofis masyarakat Melayu Palembang. Nama 'Limas' berasal dari bentuk atapnya yang limas dan bertingkat. Rumah ini biasanya dimiliki oleh kaum bangsawan atau tokoh masyarakat dan berfungsi sebagai tempat tinggal sekaligus penyelenggaraan upacara adat.",
     ciriArsitektur: "Rumah panggung kayu dengan atap limas bertingkat dan berundak. Memiliki struktur yang luas dan tinggi, dihiasi ornamen ukiran khas Palembang pada tiang dan dinding, serta dominasi warna emas dan merah pada dekorasinya.",
@@ -183,7 +178,6 @@ const rumah_adat = [
   {
     nama: "Rumah Kebaya",
     provinsi: "DKI Jakarta",
-    model3d: "https://sketchfab.com/3d-models/rumah-kebaya-78aaf26028184721af0dc99b6cbb049e",
     gambar: "../assets/images/rumah_adat_dki_jakarta.jpg",
     penjelasan: "Rumah Kebaya adalah rumah adat Betawi yang mencerminkan perpaduan budaya Melayu, Arab, Cina, dan Belanda yang membentuk identitas masyarakat Betawi di DKI Jakarta. Disebut 'kebaya' karena bentuk atapnya yang jika dilihat dari samping menyerupai lipatan kebaya. Rumah ini biasa digunakan sebagai tempat tinggal dan kegiatan sosial.",
     ciriArsitektur: "Bangunan rumah panggung rendah dari kayu, dengan atap pelana dan teras lebar di depan (emperan). Dinding kayu dihiasi ukiran dan jendela besar. Warna rumah cenderung cerah.",
@@ -217,7 +211,6 @@ const rumah_adat = [
     nama: "rumah Joglo",
     provinsi: "Jawa Tengah",
     gambar: "../assets/images/rumah_adat_jawa_tengah.jpg",
-    model3d: "https://sketchfab.com/3d-models/rumah-joglo-jawa-0714b6f2db464ed2ac1b1c844196352e",
     penjelasan: "Rumah Joglo adalah rumah adat tradisional Jawa yang identik dengan masyarakat aristokrat Jawa Tengah. Rumah ini mencerminkan tatanan sosial masyarakat Jawa dan memiliki makna filosofis mendalam terkait ketuhanan, kehidupan, dan status sosial.",
     ciriArsitektur: "Struktur atap tumpang empat dengan puncak berbentuk limasan tinggi, disebut 'tajug'. Bangunan simetris dengan tiang utama (soko guru) dan balok penyangga (tumpang sari). Material utama dari kayu jati dengan ukiran khas Jawa.",
     fungsiRuang: "Terdiri dari pendopo (ruang terbuka untuk menerima tamu), pringgitan (ruang penghubung), omah njero (ruang keluarga), dan senthong (kamar tidur). Setiap bagian memiliki fungsi spiritual dan sosial.",
@@ -297,7 +290,6 @@ const rumah_adat = [
   {
     nama: "Rumah Bale Lumbung",
     provinsi: "Nusa Tenggara Barat (NTB)",
-    model3d: "https://sketchfab.com/3d-models/rumah-adat-bale-lumbung-ntb-indonesia-a44942491a7c40aaba87abc775f96b5e",
     gambar: "https://image.idntimes.com/post/20190723/sade-00499abad3ffcce1a0ed53acd1e4269a.jpg",
     penjelasan: "Rumah adat khas suku Sasak di Lombok yang digunakan sebagai tempat tinggal dan penyimpanan hasil panen.",
     ciriArsitektur: "Berbentuk rumah panggung kecil dari kayu dan bambu, beratap alang-alang, dengan kolong untuk menyimpan hasil pertanian.",
@@ -346,7 +338,6 @@ const rumah_adat = [
   {
     nama: "Rumah Betang",
     provinsi: "Kalimantan Tengah",
-    model3d: "https://sketchfab.com/3d-models/betang-3961026e63a54053a343fde2a8c4f588",
     gambar: "../assets/images/rumah_adat_kalimantan_tengah.jpg",
     penjelasan: "Rumah Betang adalah rumah adat masyarakat Dayak di Kalimantan Tengah, dirancang untuk menampung beberapa keluarga besar dalam satu struktur. Rumah ini merupakan representasi dari kehidupan komunal dan kesetaraan dalam masyarakat adat.",
     ciriArsitektur: "Berbentuk rumah panggung besar yang memanjang hingga 150 meter, ditopang oleh tiang kayu ulin tinggi. Dinding dan lantai dari papan kayu. Memiliki tangga dan jendela kecil serta teras terbuka yang panjang.",
@@ -363,7 +354,6 @@ const rumah_adat = [
   {
     nama: "Rumah Banjar Bubungan Tinggi",
     provinsi: "Kalimantan Selatan",
-     model3d: "https://sketchfab.com/3d-models/bubungan-tinggi-rumah-adat-kalimantan-selatan-c9ede9be05f74d57b6170d212a5fada7",
     gambar: "../assets/images/rumah_adat_kalimantan_selatan.jpg",
     penjelasan: "Rumah Bubungan Tinggi adalah rumah adat suku Banjar yang paling terkenal dan menjadi simbol arsitektur tradisional Kalimantan Selatan. Nama 'bubungan tinggi' mengacu pada bentuk atap segitiga yang menjulang tajam, mencerminkan status sosial tinggi dan nilai religiusitas.",
     ciriArsitektur: "Memiliki struktur atap tajam dan tinggi di bagian tengah, dengan bangunan memanjang ke belakang. Terbuat dari kayu ulin, dengan ornamen khas Banjar seperti ukiran 'tapih bahalai'. Jendela tinggi dan pintu utama berada di tengah.",
@@ -380,7 +370,6 @@ const rumah_adat = [
   {
     nama: "Rumah Lamin",
     provinsi: "Kalimantan Timur",
-    model3d: "https://sketchfab.com/3d-models/rumah-adat-lamin-502d866136974a2286f91df8d6c89453",
     gambar: "../assets/images/rumah_adat_kalimantan_timur.jpg",
     penjelasan: "Rumah Lamin adalah rumah adat suku Dayak Kenyah yang mencerminkan kehidupan komunal masyarakat Kalimantan Timur. Rumah ini bisa dihuni oleh lebih dari 30 keluarga dalam satu bangunan dan menjadi pusat aktivitas sosial, adat, dan spiritual.",
     ciriArsitektur: "Berbentuk rumah panggung sangat panjang, bisa mencapai lebih dari 300 meter. Terbuat dari kayu ulin, dihiasi ukiran etnik Dayak dan patung totem (blontang) di bagian depan. Atapnya terbuat dari sirap kayu atau ijuk.",
@@ -413,7 +402,6 @@ const rumah_adat = [
   {
     nama: "Rumah Tongkonan",
     provinsi: "Sulawesi Selatan",
-    model3d: "https://sketchfab.com/3d-models/tongkonan-toraja-house-d614270568e24b0284a98aa1998b122c",
     gambar: "../assets/images/rumah_adat_sulawesi_selatan.jpg",
     penjelasan: "Rumah Tongkonan adalah rumah adat suku Toraja yang sangat terkenal karena bentuknya yang unik menyerupai perahu terbalik dan kaya makna simbolik. Tongkonan bukan hanya tempat tinggal, melainkan juga pusat kekuasaan, adat, dan spiritualitas dalam masyarakat Toraja.",
     ciriArsitektur: "Atap besar melengkung menyerupai perahu, dihiasi ukiran warna merah, hitam, putih, dan emas. Rumah dibangun dari kayu nangka dan berdiri di atas tiang-tiang tinggi. Ukiran berisi simbol matahari, kerbau, dan pola alam.",
@@ -430,7 +418,6 @@ const rumah_adat = [
 {
     nama: "Rumah Bola Soba",
     provinsi: "Sulawesi Selatan",
-    model3d: "https://sketchfab.com/3d-models/bugis-traditionals-house-d85593bc47784f899d461a92c33bfca4",
     gambar:  "https://assets.pikiran-rakyat.com/crop/0x0:0x0/249x140/photo/2024/11/09/3033392462.jpg",
     penjelasan: "Rumah Bulo Soba adalah rumah adat dari suku Bugis yang dulunya digunakan oleh para bangsawan atau raja di daerah Bone.",
     ciriArsitektur: "Bentuk rumah panggung, struktur dari kayu ulin dan kayu besi, atap bertingkat, ukiran khas Bugis pada dinding dan tangga.",
@@ -461,7 +448,6 @@ const rumah_adat = [
   {
     nama: "Rumah Buton (Banua Tada)",
     provinsi: "Sulawesi Tenggara",
-    model3d: "https://sketchfab.com/3d-models/rumah-buton-indonesia-option-3-ca7e608b31fe44c8af22942f4f0b32b5",
     gambar: "../assets/images/rumah_adat_sulawesi_tenggara.jpg",
     penjelasan: "Rumah Banua Tada atau Rumah Buton merupakan rumah adat masyarakat Kesultanan Buton di Sulawesi Tenggara. Arsitekturnya mencerminkan perpaduan budaya lokal, Islam, dan pengaruh arsitektur kolonial. Nama 'Banua Tada' berarti 'rumah bersiku', merujuk pada sudut tajam rangka bangunan.",
     ciriArsitektur: "Rumah panggung tinggi dari kayu jati dan ulin, dengan atap pelana. Ciri khasnya adalah sudut kayu tanpa paku (pasak kayu), dan ornamen geometris pada dinding dan langit-langit. Terdiri dari tiga lantai: lantai atas untuk simpanan pusaka, lantai tengah untuk hunian, lantai bawah untuk hewan peliharaan.",
@@ -478,7 +464,6 @@ const rumah_adat = [
   {
     nama: "Rumah Osing",
     provinsi: "Jawa Timur",
-    model3d: "https://sketchfab.com/3d-models/rumah-adat-osing-5d19da76945f4447a747e315a5a6e66f",
     gambar: "https://beritajatim.com/wp-content/uploads/2024/06/Desa-Wisata-Osing-Kemiren.webp",
     penjelasan: "Rumah adat Osing adalah rumah tradisional suku Osing di Banyuwangi yang mencerminkan gaya hidup dan nilai budaya lokal.",
     ciriArsitektur:"Bentuk rumah panggung, dinding anyaman bambu (gedheg), atap limasan atau joglo, serta halaman luas.",
@@ -509,7 +494,6 @@ const rumah_adat = [
   {
     nama: "Dulohupa",
     provinsi: "Gorontalo",
-     model3d: "https://sketchfab.com/3d-models/rumah-adat-dulohupa-e350bcb9cbe24d7caa076994e98365a3",
     gambar: "../assets/images/rumah_adat_gorontalo.jpg",
     penjelasan: "Rumah adat Dulohupa berasal dari Gorontalo dan dulunya berfungsi sebagai tempat musyawarah adat atau sidang kerajaan. Nama 'Dulohupa' berarti 'kesepakatan' atau 'musyawarah' dalam bahasa Gorontalo. Bangunan ini merepresentasikan sistem pemerintahan tradisional yang demokratis dan berbasis mufakat.",
     ciriArsitektur: "Rumah panggung dari kayu, beratap runcing dengan dua sisi yang melengkung seperti tanduk. Memiliki dua tangga depan dan belakang, serta ornamen ukiran khas Gorontalo pada tiang dan dinding. Warna dominan merah dan kuning mencerminkan kewibawaan.",
@@ -542,7 +526,6 @@ const rumah_adat = [
   {
     nama: "Baileo",
     provinsi: "Maluku",
-    model3d: "https://sketchfab.com/3d-models/rumah-adat-baileo-maluku-indonesia-a8ff3e31964847b8abf1c2f11401e713",
     gambar: "../assets/images/rumah_adat_maluku.jpg",
     penjelasan: "Rumah Baileo adalah rumah adat masyarakat Maluku yang berfungsi sebagai balai desa, tempat upacara adat, dan penyimpanan benda-benda pusaka. Nama 'Baileo' berasal dari kata 'bale' atau 'balai', tempat berkumpul dan bermusyawarah.",
     ciriArsitektur: "Bangunan besar tanpa dinding, terbuka di semua sisi, dengan tiang tinggi dan atap besar dari daun sagu atau seng. Biasanya dikelilingi pagar rendah. Tidak digunakan sebagai rumah tinggal.",
@@ -559,7 +542,6 @@ const rumah_adat = [
   {
     nama: "Sasadu",
     provinsi: "Maluku Utara",
-     model3d: "https://sketchfab.com/3d-models/rumah-adat-worat-worat-maluku-utara-indonesia-33f84af4d1f34de8844171653a7422cf",
     gambar: "../assets/images/rumah_adat_maluku_utara.jpg",
     penjelasan: "Sasadu adalah rumah adat masyarakat Sahu di Halmahera Barat, Maluku Utara. Rumah ini berfungsi sebagai tempat berkumpulnya masyarakat adat untuk diskusi, musyawarah, atau perayaan tradisional. Sasadu dibangun oleh komunitas dan menjadi simbol solidaritas sosial.",
     ciriArsitektur: "Bangunan terbuka tanpa dinding, berdiri di atas tanah tanpa tiang panggung. Atap terbuat dari daun sagu atau ilalang, dan penyangga dari kayu lokal. Bentuknya simetris dengan ruang luas tanpa sekat.",
@@ -608,7 +590,6 @@ const rumah_adat = [
   {
     nama: "Honai",
     provinsi: "Papua Pegunungan",
-    model3d: "https://sketchfab.com/3d-models/rumah-honai-papua-994c2ac920984f89b26ce1a4d766b5b9",
     gambar: "../assets/images/rumah_adat_papua_pegunungan.jpg",
     penjelasan: "Honai adalah rumah adat paling ikonik dari suku Dani di Lembah Baliem, wilayah Papua Pegunungan. Dibuat dari bahan alami, Honai dirancang untuk menahan suhu dingin pegunungan dan mempertahankan rasa kekeluargaan yang erat.",
     ciriArsitektur: "Bentuk bundar, berdinding kayu atau ilalang, beratap kerucut dari jerami. Tidak memiliki jendela, hanya satu pintu kecil. Tinggi atap pendek agar panas dari api tetap terperangkap.",

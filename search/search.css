@@ -119,9 +119,16 @@ body {
   display:none;
 }
 
-#search{
-    margin-top : 50px;
-}
+ #search {
+    flex-direction: column;   
+    text-align: center;     
+    gap: 8px;         
+    margin-top:60px;        
+  }
+
+  #judul{
+    text-align: center;
+  }
 
 .search-input,
   #province-filter,
@@ -129,48 +136,6 @@ body {
     width: 10%;             
     font-size: 15px;
   }
-
-
-@media (max-width: 768px) {
- #hasil {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 20px;
-    padding: 20px;
-}
-
- .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-
-  .fas.fa-bars{
-    display:block;
-    cursor:pointer;
-  }
-
- 
-   #search {
-    flex-direction: column;   
-    align-items: right;     
-    gap: 8px;                 
-  }
-
-  .search-input,
-  #province-filter,
-  #Submit {
-    width: 20%;             
-    font-size: 15px;
-  }
-
-}
 
 .popup {
   display: none;
@@ -209,6 +174,58 @@ body {
   cursor: pointer;
   color: #000000;
 }
+
+@media (max-width: 768px) {
+ #hasil {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    padding: 20px;
+}
+
+ .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 38px;
+    left: auto; 
+    right: -10px;
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    gap: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger-icon {
+    display: block !important;
+    cursor: pointer;
+    font-size: 22px;
+  }
+
+ 
+   #search {
+    display: flex;
+    flex-direction: column;   
+    align-items: center;      
+    gap: 10px;                
+    margin-top: 80px;
+  }
+
+  .search-input,
+  #province-filter,
+  #Submit {
+    width: 40%;       
+    font-size: 16px;
+  }
+
+}
+
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 #hasil {
