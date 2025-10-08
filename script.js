@@ -3,6 +3,7 @@ $(document).ready(function() {
         $('.nav-links').toggleClass('active'); 
     });
 
+    // Logika untuk tombol About Us
     $('#about-btn').click(function() {
         const aboutSection = $('#about-section');
         const isVisible = aboutSection.is(':visible');
@@ -12,12 +13,27 @@ $(document).ready(function() {
             $(this).text('About Us');
         } else {
             aboutSection.slideDown(300);
-            $(this).text('Hide Info');
+            $(this).text('Sembunyikan Info');
         }
     });
     
+    // --- KODE BARU UNTUK TOMBOL BERITA ---
+    $('#berita-btn').click(function() {
+        const beritaSection = $('#berita-section');
+        const isVisible = beritaSection.is(':visible');
+        
+        if (isVisible) {
+            beritaSection.slideUp(300);
+            $(this).text('Tampilkan Berita Terkini');
+        } else {
+            beritaSection.slideDown(300);
+            $(this).text('Sembunyikan Berita');
+        }
+    });
+    // --- AKHIR DARI KODE BARU ---
+
     loadFavoritesHome(); 
-    tampilkanRiwayatKuis(); 
+    tampilkanRiwayatKuis();
 
     $(document).on('click', '.unfavorit-btn', function() {
         const namaRumah = $(this).data('nama');
@@ -266,12 +282,9 @@ const Pertanyaan = [
 $("#Kerjakan").on("click", function () {
     const popup = $("#quizPopup");
     const body = $("#quizPopupBody");
-
     body.empty();
     tampilkanPertanyaan(body);
-    
     popup.addClass("show");
-
     popup.find(".close").off("click").on("click", function() {
         popup.removeClass("show");
     });
@@ -279,7 +292,6 @@ $("#Kerjakan").on("click", function () {
 
 function tampilkanPertanyaan(container) {
     container.append('<h2>Kuis Rumah Adat</h2>');
-    
     const questionsContainer = $('<div id="questionsContainer"></div>');
     $.each(Pertanyaan, function (Nomor, q) {
       const isi = $(`
@@ -295,11 +307,8 @@ function tampilkanPertanyaan(container) {
       questionsContainer.append(isi);
     });
     container.append(questionsContainer);
-
     const submitBtn = $('<button id="SubmitKuis" style="margin-top:15px; padding: 10px 20px;">Submit</button>');
     container.append(submitBtn);
-
-
     submitBtn.on("click", function () {
         let skor = 0;
         $.each(Pertanyaan, function (i, q) {
@@ -308,20 +317,16 @@ function tampilkanPertanyaan(container) {
                 skor++;
             }
         });
-
         const nilai = (skor / Pertanyaan.length) * 100;
-
         let riwayatKuis = JSON.parse(localStorage.getItem("riwayatKuis")) || [];
         riwayatKuis.push({ tanggal: new Date().toLocaleString(), nilai: nilai.toFixed(0) });
         localStorage.setItem("riwayatKuis", JSON.stringify(riwayatKuis));
-
         container.empty();
         container.append(`
             <h2>Hasil Kuis</h2>
             <p>Nilai Anda: <b>${nilai.toFixed(0)}</b></p>
             <p>Riwayat pengerjaan sudah disimpan.</p>
         `);
-        
         const ulangiBtn = $('<button id="UlangiKuis" style="margin-top:15px; padding: 10px 20px;">Kerjakan Ulang</button>');
         container.append(ulangiBtn);
         ulangiBtn.on("click", function() {
@@ -332,19 +337,15 @@ function tampilkanPertanyaan(container) {
     });
 }
 
-
 function tampilkanRiwayatKuis() {
     const $isiRiwayat = $("#RiwayatKuis");
     $isiRiwayat.empty();
     $isiRiwayat.append('<h2 class="section-title">Riwayat Kuis</h2>');
-
     let riwayatKuis = JSON.parse(localStorage.getItem("riwayatKuis")) || [];
-
     if (riwayatKuis.length === 0) {
         $isiRiwayat.append("<p style='text-align:center;'>Belum ada riwayat pengerjaan kuis.</p>");
         return;
     }
-
     riwayatKuis.forEach((r, index) => {
         $isiRiwayat.append(`
             <div class="riwayat-item" style="background-color: #333; padding: 10px; margin: 5px auto; border-radius: 5px; max-width: 300px; text-align: center;">
@@ -354,7 +355,6 @@ function tampilkanRiwayatKuis() {
         `);
     });
      $isiRiwayat.append(`<button id="HapusSemuaRiwayat" style="display: block; margin: 20px auto; padding: 8px 15px;">Hapus Semua Riwayat</button>`)
-     
     $("#HapusSemuaRiwayat").on("click", function () {
         localStorage.removeItem("riwayatKuis");
         tampilkanRiwayatKuis();
