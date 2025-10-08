@@ -273,3 +273,8 @@ function showCustomPopup(message, isSuccess) {
         popup.removeClass('show');
     }, 30000);
 }
+
+ document.getElementById("menu-toggle").addEventListener("click", function () {
+    const navLinks = document.getElementById("nav-links");
+    navLinks.classList.toggle("active");
+  });
