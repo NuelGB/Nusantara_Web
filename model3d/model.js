@@ -98,3 +98,11 @@ $('#Submit').click((e) => {
         .removeAttr('disabled')
         .append('Cari');
 });
+
+
+  document.getElementById("menu-toggle").addEventListener("click", function () {
+      const navLinks = document.getElementById("nav-links");
+      this.classList.toggle("active"); 
+      navLinks.classList.toggle("active");
+    });
+
