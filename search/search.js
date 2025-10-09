@@ -166,7 +166,6 @@ function DetailRumahAdat(rumah) {
   body.append(daftarKomentar);
 
   const KataKunci = `komentar_${rumah.nama}`;
-  const komentarList = JSON.parse(localStorage[KataKunci] || "[]");
 
 
  function tampilkanKomentar() {
@@ -207,12 +206,12 @@ function DetailRumahAdat(rumah) {
     const nama = $("#namaInput").val().trim();
     const isi = $("#komentarInput").val().trim();
     if (nama!== null && isi!== null) {
-      let komentarList = JSON.parse(localStorage.getItem(KataKunci)||"[]")//update data komentar terbaru sebelum ditambah
-      komentarList.push({ nama, isi });
-      localStorage.setItem(KataKunci, JSON.stringify(komentarList));
-      $("#namaInput").val("");
+      let komentarList = JSON.parse(localStorage.getItem(KataKunci)||"[]")//kasih tau dulu komentar yang ingin ditambahkan mau ditambahin ke rumah adat yg mana
+      komentarList.push({ nama, isi });//setelah tau kirim nama dan isi ke list koemntar
+      localStorage.setItem(KataKunci, JSON.stringify(komentarList));// nama dan isi komentar tersebut disimpan di local storage sesuai dengan rumah adat yg terkait
+      $("#namaInput").val("");//setelah itu nama dan isi komentar di form input dikosongkan
       $("#komentarInput").val("");
-      tampilkanKomentar();
+      tampilkanKomentar();//tampilin komen yg baru saja ditambahkan
     } else {
       alert("Nama dan komentar tidak boleh kosong!");
     }
