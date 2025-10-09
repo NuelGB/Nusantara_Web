@@ -176,7 +176,7 @@ function DetailRumahAdat(rumah) {
   if (komentarList.length === 0) {
     daftarKomentar.append(`<p>Belum ada komentar.</p>`);
   } else {
-    komentarList.forEach((komentar, Nomor) => {
+    komentarList.forEach((komentar) => {
       daftarKomentar.append(`
         <div style="border:1px solid #ddd;border-radius:8px;padding:8px;margin-bottom:8px;">
           nama : ${komentar.nama}
@@ -205,7 +205,7 @@ function DetailRumahAdat(rumah) {
   $("#submitKomentar").off("click").on("click", function () {
     const nama = $("#namaInput").val().trim();
     const isi = $("#komentarInput").val().trim();
-    if (nama!== null && isi!== null) {
+    if (nama!== "" || isi!== "") {
       let komentarList = JSON.parse(localStorage.getItem(KataKunci)||"[]")//kasih tau dulu komentar yang ingin ditambahkan mau ditambahin ke rumah adat yg mana
       komentarList.push({ nama, isi });//setelah tau kirim nama dan isi ke list koemntar
       localStorage.setItem(KataKunci, JSON.stringify(komentarList));// nama dan isi komentar tersebut disimpan di local storage sesuai dengan rumah adat yg terkait
